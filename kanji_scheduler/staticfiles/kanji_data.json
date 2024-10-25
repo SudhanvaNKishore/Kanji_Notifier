@@ -1,0 +1,466 @@
+{
+    "kanji": [
+        {
+            "kanji": "日",
+            "onyomi": "ニチ, ジツ",
+            "kunyomi": "ひ, か",
+            "meaning": "day, sun"
+        },
+        {
+            "kanji": "月",
+            "onyomi": "ゲツ, ガツ",
+            "kunyomi": "つき",
+            "meaning": "month, moon"
+        },
+        {
+            "kanji": "火",
+            "onyomi": "カ",
+            "kunyomi": "ひ, ほ",
+            "meaning": "fire"
+        },
+        {
+            "kanji": "水",
+            "onyomi": "スイ",
+            "kunyomi": "みず",
+            "meaning": "water"
+        },
+        {
+            "kanji": "木",
+            "onyomi": "モク, ボク",
+            "kunyomi": "き, こ",
+            "meaning": "tree, wood"
+        },
+        {
+            "kanji": "金",
+            "onyomi": "キン, コン",
+            "kunyomi": "かね, かな",
+            "meaning": "gold, money"
+        },
+        {
+            "kanji": "土",
+            "onyomi": "ド, ト",
+            "kunyomi": "つち",
+            "meaning": "earth, soil"
+        },
+        {
+            "kanji": "山",
+            "onyomi": "サン",
+            "kunyomi": "やま",
+            "meaning": "mountain"
+        },
+        {
+            "kanji": "川",
+            "onyomi": "セン",
+            "kunyomi": "かわ",
+            "meaning": "river"
+        },
+        {
+            "kanji": "田",
+            "onyomi": "デン",
+            "kunyomi": "た, だ",
+            "meaning": "rice field"
+        },
+        {
+            "kanji": "口",
+            "onyomi": "コウ, ク",
+            "kunyomi": "くち",
+            "meaning": "mouth"
+        },
+        {
+            "kanji": "目",
+            "onyomi": "モク, ボク",
+            "kunyomi": "め, ま",
+            "meaning": "eye"
+        },
+        {
+            "kanji": "耳",
+            "onyomi": "ジ",
+            "kunyomi": "みみ",
+            "meaning": "ear"
+        },
+        {
+            "kanji": "手",
+            "onyomi": "シュ",
+            "kunyomi": "て, た",
+            "meaning": "hand"
+        },
+        {
+            "kanji": "足",
+            "onyomi": "ソク",
+            "kunyomi": "あし, た-りる, た-す",
+            "meaning": "foot, leg"
+        },
+        {
+            "kanji": "車",
+            "onyomi": "シャ",
+            "kunyomi": "くるま",
+            "meaning": "car, vehicle"
+        },
+        {
+            "kanji": "校",
+            "onyomi": "コウ",
+            "kunyomi": "",
+            "meaning": "school"
+        },
+        {
+            "kanji": "空",
+            "onyomi": "クウ",
+            "kunyomi": "そら, あ, から",
+            "meaning": "sky, empty"
+        },
+        {
+            "kanji": "雨",
+            "onyomi": "ウ",
+            "kunyomi": "あめ, あま",
+            "meaning": "rain"
+        },
+        {
+            "kanji": "電",
+            "onyomi": "デン",
+            "kunyomi": "",
+            "meaning": "electricity"
+        },
+        {
+            "kanji": "食",
+            "onyomi": "ショク, ジキ",
+            "kunyomi": "た-べる, く-う",
+            "meaning": "eat, food"
+        },
+        {
+            "kanji": "飲",
+            "onyomi": "イン",
+            "kunyomi": "の-む",
+            "meaning": "drink"
+        },
+        {
+            "kanji": "行",
+            "onyomi": "コウ, ギョウ",
+            "kunyomi": "い-く, ゆ-く, おこな-う",
+            "meaning": "go, conduct"
+        },
+        {
+            "kanji": "来",
+            "onyomi": "ライ",
+            "kunyomi": "く-る, き-ます, きた-る",
+            "meaning": "come"
+        },
+        {
+            "kanji": "見",
+            "onyomi": "ケン",
+            "kunyomi": "み-る, み-える, み-せる",
+            "meaning": "see, look"
+        },
+        {
+            "kanji": "聞",
+            "onyomi": "ブン, モン",
+            "kunyomi": "き-く, き-こえる",
+            "meaning": "hear, ask"
+        },
+        {
+            "kanji": "話",
+            "onyomi": "ワ",
+            "kunyomi": "はな-す, はなし",
+            "meaning": "talk, speech"
+        },
+        {
+            "kanji": "買",
+            "onyomi": "バイ",
+            "kunyomi": "か-う",
+            "meaning": "buy"
+        },
+        {
+            "kanji": "売",
+            "onyomi": "バイ",
+            "kunyomi": "う-る, う-れる",
+            "meaning": "sell"
+        },
+        {
+            "kanji": "分",
+            "onyomi": "ブン, フン, ブ",
+            "kunyomi": "わ-ける, わ-かる",
+            "meaning": "part, minute"
+        },
+        {
+            "kanji": "千",
+            "onyomi": "セン",
+            "kunyomi": "ち",
+            "meaning": "thousand"
+        },
+        {
+            "kanji": "万",
+            "onyomi": "マン, バン",
+            "kunyomi": "よろず",
+            "meaning": "ten thousand"
+        },
+        {
+            "kanji": "円",
+            "onyomi": "エン",
+            "kunyomi": "まる-い, まる",
+            "meaning": "yen, circle"
+        },
+        {
+            "kanji": "子",
+            "onyomi": "シ, ス",
+            "kunyomi": "こ, -こ",
+            "meaning": "child"
+        },
+        {
+            "kanji": "女",
+            "onyomi": "ジョ, ニョ",
+            "kunyomi": "おんな, め",
+            "meaning": "woman"
+        },
+        {
+            "kanji": "男",
+            "onyomi": "ダン, ナン",
+            "kunyomi": "おとこ",
+            "meaning": "man"
+        },
+        {
+            "kanji": "兄",
+            "onyomi": "キョウ",
+            "kunyomi": "あに",
+            "meaning": "older brother"
+        },
+        {
+            "kanji": "弟",
+            "onyomi": "ダイ, テイ",
+            "kunyomi": "おとうと",
+            "meaning": "younger brother"
+        },
+        {
+            "kanji": "姉",
+            "onyomi": "シ, ニ",
+            "kunyomi": "あね",
+            "meaning": "older sister"
+        },
+        {
+            "kanji": "妹",
+            "onyomi": "マイ",
+            "kunyomi": "いもうと",
+            "meaning": "younger sister"
+        },
+        {
+            "kanji": "友",
+            "onyomi": "ユウ",
+            "kunyomi": "とも",
+            "meaning": "friend"
+        },
+        {
+            "kanji": "先",
+            "onyomi": "セン",
+            "kunyomi": "さき",
+            "meaning": "before, previous"
+        },
+        {
+            "kanji": "生",
+            "onyomi": "セイ, ショウ",
+            "kunyomi": "い-きる, う-まれる, なま",
+            "meaning": "life, birth"
+        },
+        {
+            "kanji": "学",
+            "onyomi": "ガク",
+            "kunyomi": "まな-ぶ",
+            "meaning": "study, learning"
+        },
+        {
+            "kanji": "校",
+            "onyomi": "コウ",
+            "kunyomi": "",
+            "meaning": "school"
+        },
+        {
+            "kanji": "会",
+            "onyomi": "カイ, エ",
+            "kunyomi": "あ-う",
+            "meaning": "meet, association"
+        },
+        {
+            "kanji": "合",
+            "onyomi": "ゴウ, ガッ",
+            "kunyomi": "あ-う, あ-わせる",
+            "meaning": "fit, join"
+        },
+        {
+            "kanji": "事",
+            "onyomi": "ジ, ズ",
+            "kunyomi": "こと",
+            "meaning": "thing, matter"
+        },
+        {
+            "kanji": "使",
+            "onyomi": "シ",
+            "kunyomi": "つか-う",
+            "meaning": "use"
+        },
+        {
+            "kanji": "所",
+            "onyomi": "ショ",
+            "kunyomi": "ところ, -ところ",
+            "meaning": "place"
+        },
+        {
+            "kanji": "知",
+            "onyomi": "チ",
+            "kunyomi": "し-る",
+            "meaning": "know"
+        },
+        {
+            "kanji": "言",
+            "onyomi": "ゲン, ゴン",
+            "kunyomi": "い-う, こと",
+            "meaning": "say, word"
+        },
+        {
+            "kanji": "話",
+            "onyomi": "ワ",
+            "kunyomi": "はな-す, はなし",
+            "meaning": "talk, story"
+        },
+        {
+            "kanji": "語",
+            "onyomi": "ゴ",
+            "kunyomi": "かた-る",
+            "meaning": "language, word"
+        },
+        {
+            "kanji": "持",
+            "onyomi": "ジ",
+            "kunyomi": "も-つ",
+            "meaning": "hold"
+        },
+        {
+            "kanji": "見",
+            "onyomi": "ケン",
+            "kunyomi": "み-る, み-える, み-せる",
+            "meaning": "see"
+        },
+        {
+            "kanji": "行",
+            "onyomi": "コウ, ギョウ",
+            "kunyomi": "い-く, ゆ-く, おこな-う",
+            "meaning": "go"
+        },
+        {
+            "kanji": "生",
+            "onyomi": "セイ, ショウ",
+            "kunyomi": "い-きる, う-まれる, なま",
+            "meaning": "live, birth"
+        },
+        {
+            "kanji": "入",
+            "onyomi": "ニュウ, ジュ",
+            "kunyomi": "い-る, はい-る",
+            "meaning": "enter, insert"
+        },
+        {
+            "kanji": "高",
+            "onyomi": "コウ",
+            "kunyomi": "たか-い",
+            "meaning": "high, tall"
+        },
+        {
+            "kanji": "新",
+            "onyomi": "シン",
+            "kunyomi": "あたら-しい, あら-た",
+            "meaning": "new"
+        },
+        {
+            "kanji": "小",
+            "onyomi": "ショウ",
+            "kunyomi": "ちい-さい, こ-",
+            "meaning": "small"
+        },
+        {
+            "kanji": "大",
+            "onyomi": "ダイ, タイ",
+            "kunyomi": "おお-きい",
+            "meaning": "big"
+        },
+        {
+            "kanji": "明",
+            "onyomi": "メイ, ミョウ",
+            "kunyomi": "あか-るい, あき-らか",
+            "meaning": "bright, clear"
+        },
+        {
+            "kanji": "暗",
+            "onyomi": "アン",
+            "kunyomi": "くら-い",
+            "meaning": "dark"
+        },
+        {
+            "kanji": "遠",
+            "onyomi": "エン",
+            "kunyomi": "とお-い",
+            "meaning": "far, distant"
+        },
+        {
+            "kanji": "近",
+            "onyomi": "キン",
+            "kunyomi": "ちか-い",
+            "meaning": "near"
+        },
+        {
+            "kanji": "遅",
+            "onyomi": "チ",
+            "kunyomi": "おそ-い, おく-れる",
+            "meaning": "slow, late"
+        },
+        {
+            "kanji": "早",
+            "onyomi": "ソウ",
+            "kunyomi": "はや-い, はや-める",
+            "meaning": "early, fast"
+        },
+        {
+            "kanji": "良",
+            "onyomi": "リョウ",
+            "kunyomi": "よ-い",
+            "meaning": "good"
+        },
+        {
+            "kanji": "悪",
+            "onyomi": "アク",
+            "kunyomi": "わる-い",
+            "meaning": "bad"
+        },
+        {
+            "kanji": "楽",
+            "onyomi": "ガク, ラク",
+            "kunyomi": "たの-しい, たの-しむ",
+            "meaning": "enjoyable, music"
+        },
+        {
+            "kanji": "簡",
+            "onyomi": "カン",
+            "kunyomi": "かんたん",
+            "meaning": "simple"
+        },
+        {
+            "kanji": "難",
+            "onyomi": "ナン",
+            "kunyomi": "むずか-しい",
+            "meaning": "difficult"
+        },
+        {
+            "kanji": "冷",
+            "onyomi": "レイ",
+            "kunyomi": "ひ-やす, ひ-える",
+            "meaning": "cool, cold"
+        },
+        {
+            "kanji": "暑",
+            "onyomi": "ショ",
+            "kunyomi": "あつ-い",
+            "meaning": "hot (weather)"
+        },
+        {
+            "kanji": "寒",
+            "onyomi": "カン",
+            "kunyomi": "さむ-い",
+            "meaning": "cold (weather)"
+        }
+    ]
+}

@@ -1,0 +1,352 @@
+html
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Signup Form</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="image-section">
+    <img src="{% static 'Images/login-kanji-image.png' %}" alt="Login Image">
+  </div>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login</div>
+      <div class="title signup">Signup</div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Login</label>
+        <label for="signup" class="slide signup">Signup</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <!-- Login Form -->
+        <form action="{% url 'login' %}" method="POST" class="login">
+          {% csrf_token %}
+          <div class="field">
+            <input type="text" name="username" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <i class="fas fa-eye toggle-password"></i>
+          </div>
+          <div class="pass-link"><a href="#">Forgot password?</a></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">Not a member? <a href="#signup">Signup now</a></div>
+        </form>
+
+        <!-- Signup Form -->
+        <form action="{% url 'signup' %}" method="POST" class="signup">
+          {% csrf_token %}
+          <div class="field">
+            <input type="text" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" name="password1" placeholder="Password" required>
+            <i class="fas fa-eye toggle-password"></i>
+          </div>
+          <div class="field">
+            <input type="password" name="password2" placeholder="Confirm Password" required>
+            <i class="fas fa-eye toggle-password"></i>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Signup">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+css
+
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html, body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: #eadddd;
+}
+::selection {
+  background: #FF69B4;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+  flex: 1;
+  padding: 20px; 
+}
+.image-section img {
+  width: 104%;
+  height: 98%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: block;
+  margin: 5px auto;
+}
+.wrapper {
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title-text {
+  display: flex;
+  width: 200%;
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .title {
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .slide-controls {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+}
+.slide-controls .slide {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slide-controls label.signup {
+  color: #000;
+}
+.slide-controls .slider-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 15px;
+  background: -webkit-linear-gradient(left, #FF69B4, #F9629F, #eec0c8, #FFC0CB);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+input[type="radio"] {
+  display: none;
+}
+#signup:checked ~ .slider-tab {
+  left: 50%;
+}
+#signup:checked ~ label.signup {
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login {
+  color: #000;
+}
+#login:checked ~ label.signup {
+  color: #000;
+}
+#login:checked ~ label.login {
+  cursor: default;
+  user-select: none;
+}
+
+#login:checked ~ .form-container .title-text {
+  transform: translateX(0%);
+}
+
+#signup:checked ~ .form-container .title-text {
+  transform: translateX(-50%);
+}
+
+.wrapper .form-container {
+  width: 95%;
+  overflow: hidden;
+}
+.form-container .form-inner {
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form {
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-inner form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-inner form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field input:focus {
+  border-color: #FF69B4;
+}
+.form-inner form .field input::placeholder {
+  color: #999;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder {
+  color: #FF69B4;
+}
+.form-inner form .field .toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
+}
+.form-inner form .field .toggle-password:hover {
+  color: #FF69B4;
+}
+.form-inner form .pass-link {
+  margin-top: 5px;
+}
+.form-inner form .signup-link {
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+  color: #FF69B4;
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+  text-decoration: underline;
+}
+form .btn {
+  height: 50px;
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #FF69B4, #F9629F, #eec0c8, #FFC0CB);
+  border-radius: 15px;
+  transition: all 0.4s ease;
+}
+form .btn:hover .btn-layer {
+  left: 0;
+}
+form .btn input[type="submit"] {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+
+
+js
+
+const loginText = document.querySelector(".title-text .login");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form .signup-link a");
+
+signupBtn.onclick = () => {
+  loginForm.style.marginLeft = "-50%";
+  loginText.style.marginLeft = "-50%";
+};
+
+loginBtn.onclick = () => {
+  loginForm.style.marginLeft = "0%";
+  loginText.style.marginLeft = "0%";
+};
+
+signupLink.onclick = () => {
+  signupBtn.click();
+  return false;
+};
+
+// Toggle password visibility
+document.querySelectorAll('.toggle-password').forEach(item => {
+  item.addEventListener('click', function() {
+    const input = this.previousElementSibling;
+    if (input.type === "password") {
+      input.type = "text";
+      this.classList.remove('fa-eye');
+      this.classList.add('fa-eye-slash');
+    } else {
+      input.type = "password";
+      this.classList.remove('fa-eye-slash');
+      this.classList.add('fa-eye');
+    }
+  });
+});

@@ -1,0 +1,128 @@
+<!--
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Signup Form</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="image-section">
+    <img src="{% static 'Images/Signup-image.png' %}" alt="Login Image">
+  </div>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login</div>
+      <div class="title signup">Signup</div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Login</label>
+        <label for="signup" class="slide signup">Signup</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        
+        <form action="{% url 'login' %}" method="POST" class="login">
+          {% csrf_token %}
+          <div class="field">
+            <input type="text" name="username" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <i class="fas fa-eye toggle-password"></i>
+          </div>
+          <div class="pass-link"><a href="#">Forgot password?</a></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">Not a member? <a href="#signup">Signup now</a></div>
+        </form>
+
+        
+        <form action="{% url 'signup' %}" method="POST" class="signup">
+          {% csrf_token %}
+          <div class="field">
+            <input type="text" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" name="password1" placeholder="Password" required>
+            <i class="fas fa-eye toggle-password"></i>
+          </div>
+          <div class="field">
+            <input type="password" name="password2" placeholder="Confirm Password" required>
+            <i class="fas fa-eye toggle-password"></i>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Signup">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
+-->
+
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="image-section">
+    <img src="{% static 'Images/Signup-image.png' %}" alt="Signup Image">
+  </div>
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title signup">Signup</div>
+    </div>
+    <div class="form-container">
+      <div class="form-inner">
+        <!-- Signup Form -->
+        <form action="{% url 'signup' %}" method="POST" class="signup">
+          {% csrf_token %}
+          <div class="field">
+            <input type="text" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" name="password1" placeholder="Password" required>
+            <i class="fas fa-eye toggle-password"></i>
+          </div>
+          <div class="field">
+            <input type="password" name="password2" placeholder="Confirm Password" required>
+            <i class="fas fa-eye toggle-password"></i>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Signup">
+          </div>
+          <div class="signup-link">Already a member? <a href="{% url 'login' %}">Login now</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

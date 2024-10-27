@@ -124,8 +124,12 @@
 
 
         
+        
+
         <!-- Logout Button -->
-        <button class="btn">Logout</button>
+        <form action="{% url 'login' %}" method="GET" style="display: inline;">
+            <button class="btn" type="submit">Logout</button>
+        </form>
 
         
     </div>

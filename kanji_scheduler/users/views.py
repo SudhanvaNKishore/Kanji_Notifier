@@ -3,6 +3,12 @@ from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.models import User
 from django.contrib import messages
 
+
+from .forms import UserPreferencesForm
+from .models import UserPreferences
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import views as auth_views  # Ensure this line is included
+
 def signup_view(request):
     if request.method == 'POST':
         email = request.POST['email']
@@ -37,8 +43,89 @@ def login_view(request):
 
 
 # View to render the home page
+# def home(request):
+#     return render(request, 'users/home.html')
+
+
+#View to render the home page and logic
+# def home(request):
+#     if request.method == 'POST':
+#         form = UserPreferencesForm(request.POST, instance=request.user.userpreferences)
+#         if form.is_valid():
+#             preferences = form.save(commit=False)
+#             preferences.user = request.user
+#             preferences.save()
+#             # Redirect to a success page or refresh
+#             return redirect('home')
+#     else:
+#         form = UserPreferencesForm(instance=request.user.userpreferences)
+
+#     return render(request, 'users/home.html', {'form': form})
+
+@login_required
 def home(request):
-    return render(request, 'users/home.html')
+    # Check if the user has preferences, create a new one if not
+    preferences, created = UserPreferences.objects.get_or_create(user=request.user)
+
+    if request.method == 'POST':
+        form = UserPreferencesForm(request.POST, instance=preferences)  # Update preferences
+        if form.is_valid():
+            form.save()  # Save the preferences
+            return redirect('home')  # Redirect to the home page or wherever you want
+    else:
+        form = UserPreferencesForm(instance=preferences)  # Load existing preferences into the form
+
+    return render(request, 'users/home.html', {'form': form})
+
+
+# This is for user preferences data 
+
+def preferences_view(request):
+    if request.method == 'POST':
+        form = UserPreferencesForm(request.POST)
+        if form.is_valid():
+            preferences = form.save(commit=False)
+            preferences.user = request.user  # Associate preferences with the logged-in user
+            preferences.save()
+            # You can call your save_preferences function here if needed
+            return redirect('home')  # Redirect to the home page or wherever you want
+    else:
+        form = UserPreferencesForm()
+
+    return render(request, 'path/to/preferences_template.html', {'form': form})
+
+
+# Custom login view
+class CustomLoginView(auth_views.LoginView):
+    template_name = 'users/login.html'  # Specify your actual login template path here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # # Home view
 # def home_view(request):

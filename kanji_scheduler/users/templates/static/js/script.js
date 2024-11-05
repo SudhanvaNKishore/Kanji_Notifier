@@ -191,25 +191,142 @@
 
 
 
-const loginForm = document.querySelector('.login-form');
-const signupForm = document.querySelector('.signup-form');
-const loginRadio = document.getElementById('login');
-const signupRadio = document.getElementById('signup');
+// const loginForm = document.querySelector('.login-form');
+// const signupForm = document.querySelector('.signup-form');
+// const loginRadio = document.getElementById('login');
+// const signupRadio = document.getElementById('signup');
 
-loginRadio.addEventListener('change', () => {
-    if (loginRadio.checked) {
-        signupForm.style.display = 'none';
-        loginForm.style.display = 'block';
+// loginRadio.addEventListener('change', () => {
+//     if (loginRadio.checked) {
+//         signupForm.style.display = 'none';
+//         loginForm.style.display = 'block';
+//     }
+// });
+
+// signupRadio.addEventListener('change', () => {
+//     if (signupRadio.checked) {
+//         loginForm.style.display = 'none';
+//         signupForm.style.display = 'block';
+//     }
+// });
+
+// // Set initial state
+// loginForm.style.display = 'block';
+// signupForm.style.display = 'none';
+
+
+
+
+// // New js code with toggle features 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const loginForm = document.querySelector('.login');
+//     const signupForm = document.querySelector('.signup-form');
+//     const loginRadio = document.getElementById('login');
+//     const signupRadio = document.getElementById('signup');
+
+//     // Toggle between login and signup forms
+//     loginRadio.addEventListener('change', () => {
+//         if (loginRadio.checked) {
+//             signupForm.style.display = 'none';
+//             loginForm.style.display = 'block';
+//         }
+//     });
+
+//     signupRadio.addEventListener('change', () => {
+//         if (signupRadio.checked) {
+//             loginForm.style.display = 'none';
+//             signupForm.style.display = 'block';
+//         }
+//     });
+
+//     // Set initial state
+//     loginForm.style.display = 'block';
+//     signupForm.style.display = 'none';
+
+//     // Wait for the DOM to be fully loaded
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Get all toggle password icons
+//     const togglePasswordIcons = document.querySelectorAll('.toggle-password');
+    
+//     // Add click event listener to each icon
+//     togglePasswordIcons.forEach(icon => {
+//         icon.addEventListener('click', function() {
+//             // Find the nearest password input field (sibling of the icon)
+//             const passwordInput = this.previousElementSibling || this.parentElement.querySelector('input[type="password"]');
+            
+//             // Toggle password visibility
+//             if (passwordInput.type === 'password') {
+//                 passwordInput.type = 'text';
+//                 this.classList.remove('fa-eye');
+//                 this.classList.add('fa-eye-slash');
+//             } else {
+//                 passwordInput.type = 'password';
+//                 this.classList.remove('fa-eye-slash');
+//                 this.classList.add('fa-eye');
+//             }
+//         });
+//     });
+      
+// });
+
+// });
+
+
+ // Toggle password visibility
+ 
+ 
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+    // Form toggle functionality
+    const loginForm = document.querySelector('form.login');
+    const signupForm = document.querySelector('form.signup');
+    const loginRadio = document.getElementById('login');
+    const signupRadio = document.getElementById('signup');
+
+    // Toggle between login and signup forms
+    if (loginRadio && signupRadio) {  // Check if elements exist
+        loginRadio.addEventListener('change', () => {
+            if (loginRadio.checked) {
+                signupForm.style.display = 'none';
+                loginForm.style.display = 'block';
+            }
+        });
+
+        signupRadio.addEventListener('change', () => {
+            if (signupRadio.checked) {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+            }
+        });
     }
-});
 
-signupRadio.addEventListener('change', () => {
-    if (signupRadio.checked) {
-        loginForm.style.display = 'none';
-        signupForm.style.display = 'block';
-    }
-});
+    // Password toggle functionality
+    const togglePasswordIcons = document.querySelectorAll('.toggle-password');
+    
+    togglePasswordIcons.forEach(icon => {
+        icon.addEventListener('click', function(e) {
+            // Prevent the click from submitting the form
+            e.preventDefault();
+            
+            // Find the password input field that's a sibling of the icon
+            const passwordField = this.parentElement.querySelector('input[type="password"]');
+            
+            if (passwordField) {
+                // Toggle the password visibility
+                if (passwordField.type === 'password') {
+                    passwordField.type = 'text';
+                    this.classList.remove('fa-eye');
+                    this.classList.add('fa-eye-slash');
+                } else {
+                    passwordField.type = 'password';
+                    this.classList.remove('fa-eye-slash');
+                    this.classList.add('fa-eye');
+                }
+            }
+        });
+    });
 
-// Set initial state
-loginForm.style.display = 'block';
-signupForm.style.display = 'none';
+    // Log for debugging
+    console.log('Number of password toggle icons found:', togglePasswordIcons.length);
+});

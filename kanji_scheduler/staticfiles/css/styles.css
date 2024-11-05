@@ -262,3 +262,13 @@ form .btn input[type="submit"] {
     font-weight: 500;
     cursor: pointer;
 }
+
+
+.field .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10; /* Add this to ensure the icon is clickable */
+}

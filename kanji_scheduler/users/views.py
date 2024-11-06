@@ -35,9 +35,11 @@ def login_view(request):
 
         if user is not None:
             auth_login(request, user)
-            return redirect('login')  # Stay on login page after logging in for now
+            return redirect('home')  # Stay on login page after logging in for now
         else:
+            # Invalid credentials, show error and redirect to signup
             messages.error(request, 'Invalid credentials.')
+            return redirect('signup')  # Redirect to signup page
 
     return render(request, 'users/login.html')  # Ensure login page renders
 

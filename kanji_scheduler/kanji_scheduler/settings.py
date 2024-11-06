@@ -120,3 +120,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 LOGIN_URL = 'login'  # This should match the name in your URL pattern
+
+LOGIN_REDIRECT_URL = 'home'  # This should match the name of your home view

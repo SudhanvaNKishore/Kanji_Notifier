@@ -99,6 +99,18 @@
     </div>
     <div class="form-container">
       <div class="form-inner">
+
+        <!-- Display messages -->
+        {% if messages %}
+          <div class="messages">
+            <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
         <!-- Signup Form -->
         <form action="{% url 'signup' %}" method="POST" class="signup">
           {% csrf_token %}

@@ -79,6 +79,34 @@ def home(request):
 
     return render(request, 'users/home.html', {'form': form})
 
+def home_view(request):
+    if request.method == 'POST':
+        # If the user is submitting preferences
+        kanji_count = request.POST.get('number_of_kanjis')
+        duration = request.POST.get('email_duration')
+        email_time = request.POST.get('email_time')  # Ensure this is being captured from the form
+        
+        if email_time:
+            preferences = UserPreferences.objects.create(
+                user=request.user,
+                number_of_kanjis_per_day=kanji_count,
+                email_duration=duration,
+                email_time=email_time  # Ensure email_time is saved
+            )
+            preferences.save()
+        else:
+            messages.error(request, 'Please select an email time')
+    else:
+        # Handle GET requests
+        preferences = UserPreferences.objects.filter(user=request.user).first()
+        
+        # If no preferences exist yet, initialize with defaults or redirect to form
+        if not preferences:
+            return redirect('preferences')  # Or render a default form for preferences
+
+    return render(request, 'home.html', {'preferences': preferences})
+
+
 
 # This is for user preferences data 
 

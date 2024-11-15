@@ -161,13 +161,13 @@
         <h1>Set Your Preferences</h1>
 
         <!-- Display current preferences if they exist -->
-        {% if form.instance.pk %}
+        <!-- {% if form.instance.pk %}
             <p>Kanjis per day: {{ form.instance.kanji_per_day }}</p>
             <p>Duration: {{ form.instance.duration_in_days }} days</p>
             <p>Email time: {{ form.instance.email_time }}</p>
         {% else %}
             <p>No preferences set. Please update your preferences.</p>
-        {% endif %}
+        {% endif %} -->
 
         <!-- Dropdown for Kanji per Day -->
         <div class="field">
@@ -215,11 +215,11 @@
         </form>
 
         <!-- Save Preferences -->
-        <form method="POST">
+        <!-- <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="btn">Save Preferences</button>
-        </form>
+        </form> -->
         
     </div>
 </body>

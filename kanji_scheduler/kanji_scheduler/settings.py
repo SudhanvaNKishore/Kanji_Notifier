@@ -122,3 +122,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_URL = 'login'  # This should match the name in your URL pattern
 
 LOGIN_REDIRECT_URL = 'home'  # This should match the name of your home view
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'sudhanvan777@gmail.com'  # Your email address
+EMAIL_HOST_PASSWORD = 'password'   # App password (not your Gmail password)
